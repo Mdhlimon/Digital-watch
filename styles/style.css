@@ -1,0 +1,24 @@
+body{
+    background-image: url('../image/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+body div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
+}
+.time{
+    color: black;
+    font-weight: bold;
+    background-color: rgba(223, 160, 45, 0.5);
+    text-align: center;
+    width: 130px;
+    font-size: 100px;
+    padding: 10px;
+    border: 5px solid rgba(230, 153, 140,0.2);
+    margin: 50px 20px;
+    border-radius: 10px;
+}
