@@ -5,9 +5,17 @@ let hour = 0;
 
 function time(){
     const second = setInterval(() => {
-
+        
+        // Code for Reset
         document.getElementById('reset-btn').addEventListener('click',function(){
+
+            // Enable Start Button
+            const btn = document.getElementById('start-btn');
+            btn.disabled = false;
+            
             clearInterval(second);
+
+            // set all value Zero.
             mileSec *= 0;
             sec *= 0;
             min *= 0;
@@ -19,22 +27,23 @@ function time(){
             console.log(hour, min, sec, mileSec);
         });
 
+        // Mile-Second Area
         ++mileSec;
-        // console.log(mileSec);
         if( mileSec === 100){
             mileSec -= 100;
-            ++sec;
-            // console.log('sec',sec);
-            
+
+            // Second Area
+            ++sec;            
             if(sec === 60){
-                
                 sec -=60;
+
+                // minute Area
                 ++min;
-                // console.log('min',min);
                 if(min === 60){
                     min -=60;
+
+                    // Hour Area
                     ++hour;
-                    // console.log('Hour' + ':', hour);
                     if(hour === 24){
                         hour -=24;
                     }
@@ -46,21 +55,25 @@ function time(){
         }
         getElement('mile', mileSec);
     },10);
+
+    // Stop Button
     document.getElementById('stop-btn').addEventListener('click',function(){
+        const btn = document.getElementById('start-btn');
+        btn.disabled = false;
         clearInterval(second)
     });
 }
 
+// Set Inner Text
 function getElement(id, text){
     const element = document.getElementById(id);
-    // const elementValue = element.innerText;
     element.innerText = text;
-    // console.log(element.innerText);
 }
+
+// Start Button
 document.getElementById('start-btn').addEventListener('click',function(){
+    // disable start button
+    const btn = document.getElementById('start-btn');
+    btn.disabled = true;
     time();
 });
-
-
-// getElement('h', '6');
-// time();
