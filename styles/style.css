@@ -3,12 +3,12 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    margin-top: 15%;
 }
-body div{
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25%;
 }
 .time{
     color: black;
@@ -21,4 +21,15 @@ body div{
     border: 5px solid rgba(230, 153, 140,0.2);
     margin: 50px 20px;
     border-radius: 10px;
+}
+.btn{
+    width: 75px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px ;
+    background-color: tomato;
+    border: 0px;
 }
